@@ -16,21 +16,38 @@ public class Ejercicio10 {
 		int segundos;
 
 		// La consola muestra que indiquemos la hora
-		System.out.println("Indica un numero:");
-		hora = sc.nextInt();	
+		System.out.println("Indica la hora:");
+		hora = sc.nextInt();
+		System.out.println("Indica los minutos:");
 		minutos = sc.nextInt();
+		System.out.println("Indica los segundos:");
 		segundos = sc.nextInt();
 
 		// Usamos if para saber que hora seria un segundo despues
 		if (segundos < 59) {
 			++segundos;
-		} else if (minutos < 59) {
-			++minutos;
-		} else if (hora < 59) {
+		} else {
+			segundos= 0;
 			
-		}else if ()
-					
+			if (minutos < 59) {
+				++minutos; 
+			}else {
+				minutos = 0;
+				
+				if (hora < 24) {
+					++hora;
+				} else {
+					hora = 0;
+				}
+		} 
+			
+		}
 		
+		//Imprime por pantalla las horas, minutos y segundos que seran dentro de un segundo
+		System.out.println("Dentro de un segundo seran las " + hora + ":" + minutos + ":" + segundos);
+		
+		//Cerramos el scanner
+		sc.close();
 	}
 
 }
