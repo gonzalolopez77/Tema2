@@ -75,9 +75,15 @@ public class Ejercicio04 {
 		}
 		};		
 		
+		
 		//Suma el valor de los dados y los imprime por pantalla
 		totalDados= dado1 + dado2;
+		
+		if (totalDados > 0) {
 		System.out.println("La suma de los dados es: " + totalDados);
+		} else {
+			
+		}
 		
 		//Cierra el scanner
 		sc.close();
