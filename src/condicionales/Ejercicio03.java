@@ -7,23 +7,25 @@ public class Ejercicio03 {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		//Entrada: -1 || Resultado esperado: 1 || Resultado obtenido: 1
-		//Entrada: 1 || Resultado esperado: 1 || Resultado obtenido: 1
-		
+		// Entrada: 11111111 || Resultado esperado: H || Resultado obtenido: H
+		// Entrada: 1 || Resultado esperado: "Los DNI tienen 8 numeros" || Resultado obtenido: "Los DNI tienen 8 numeros"
+
 		// Crea el scanner
 		Scanner sc = new Scanner(System.in);
-		
-		//Creamos la variable dni
+
+		// Creamos la variable dni
 		int dni;
 		int letra = 0;
-		
-		//La consola nos pide nuestro DNI y lo almacena en dni
+
+		// La consola nos pide nuestro DNI y lo almacena en dni
 		System.out.println("Introduce tu DNI sin letra: ");
 		dni = sc.nextInt();
-		
-		//
-		if (dni>9999999 && dni<100000000) {
-			letra = dni /23;
+
+		// Utilizamos if para que cuando el valor no sea un digito de 8 numeros de un
+		// mensaje de error y cuando si sea un valor de 8 digitos ejecute un switch que
+		// te asigne una letra u otra segun el valor
+		if (dni > 9999999 && dni < 100000000) {
+			letra = dni % 23;
 			switch (letra) {
 			case 0 -> System.out.println("T");
 			case 1 -> System.out.println("R");
@@ -47,15 +49,15 @@ public class Ejercicio03 {
 			case 19 -> System.out.println("L");
 			case 20 -> System.out.println("C");
 			case 21 -> System.out.println("K");
-			case 22 -> System.out.println("E");		
+			case 22 -> System.out.println("E");
 			}
-		}else {
-			System.out.println("Los DNI tienen 8 numeros");	
+		} else {
+			System.out.println("Los DNI tienen 8 numeros");
 		}
-		
-		//Cierra el scanner
-		sc.close();			
-		
+
+		// Cierra el scanner
+		sc.close();
+
 	}
 
 }
