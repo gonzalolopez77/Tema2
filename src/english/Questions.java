@@ -11,12 +11,12 @@ public class Questions {
 		Scanner keyboard = new Scanner(System.in);
 		System.out.print("Enter a number: ");
 		x = keyboard.nextInt();
-		if (x > 10)
-				   System.out.println("Green");
-		           System.out.println("Blue");
-		      
-		System.out.println("Red");
+		switch (x)
+		{
+		 case 1: case 2: System.out.println("Green"); break;
+		case 3: case 4: case 5: System.out.println("Blue"); break;
 		}
+		System.out.println("Red");
 
-		
+	}	
 	}
