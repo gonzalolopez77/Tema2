@@ -11,13 +11,13 @@ public class Ejercicio04 {
 		Scanner sc = new Scanner(System.in);
 				
 		//Variable suma y contImpares
-		int suma = 1;
+		int suma = 0;
 		int contImpares = 1;
 		
 		// for: desde 1 hasta 10 de 1 en 1
 		for(int cont = 1; cont<= 10; cont++) {
-			contImpares +=2;
 			suma += contImpares;
+			contImpares += 2;
 		}
 		
 		//Imprimimos la suma
