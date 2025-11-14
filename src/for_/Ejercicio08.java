@@ -13,6 +13,9 @@ public class Ejercicio08 {
 		//Variable 
 		int numA;
 		int numB;
+		int mayor;
+		int menor;
+		
 		
 		//Pide por consola que introduzcas un numero y lo almacena en numFactorizar
 		System.out.println("Introduce un numero: ");
@@ -20,25 +23,18 @@ public class Ejercicio08 {
 		System.out.println("Introduce otro numero: ");
 		numB = sc.nextInt();
 		
-		//
-		if(numA < numB) {
-			// for: desde num hasta 1 de 1 en 1
-			for(int cont = numA; cont <= numB; cont++) {
-				System.out.print(cont);
-				if(cont < numB) {
-					System.out.print(",");
-				}
-			}
-		} else {
-			for(int cont = numB; cont <= numA; cont++) {
-				System.out.print(cont);
-				if(cont < numA) {
-					System.out.print(",");
-				}
-			}
-		}
+		//Para almacenar el numero menor en menor y el numero mayor en mayor
+		menor = Math.min(numA, numB);
+		mayor = Math.max(numA, numB);
 		
-		
+		// for: desde menor hasta mayor de 1 en 1
+		for(int cont = menor; cont <= mayor; cont++) {
+			System.out.print(cont);
+			if(cont < mayor) {
+				System.out.print(",");
+			}
+			}
+			
 		//Cierra el scanner
 		sc.close();			
 		

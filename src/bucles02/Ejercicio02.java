@@ -1,8 +1,8 @@
-package for_;
+package bucles02;
 
 import java.util.Scanner;
 
-public class Ejercicio07 {
+public class Ejercicio02 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -16,8 +16,6 @@ public class Ejercicio07 {
 		// Variable para determinar si el número es primo
 		boolean esPrimo = true;
 
-		int cont = 2;
-
 		// Pido un número al usuario
 		System.out.println("Introduzca un número entero positivo:");
 		num = sc.nextInt();
@@ -29,20 +27,13 @@ public class Ejercicio07 {
 				esPrimo = false;
 			} else {
 				// Si es distinto de 1
-//				for (int cont = 2; cont < num ; cont++) {
-//					if (num % cont == 0) {
-//						esPrimo = false;
-//						break;
-//					}
-//				}
-
-				while (cont < num && esPrimo) {
+				for (int cont = 2; cont < num ; cont++) {
 					if (num % cont == 0) {
 						esPrimo = false;
+						System.out.println(cont);
 					}
+			}
 
-					cont++;
-				}
 			}
 			System.out.println(esPrimo ? "El número es primo" : "El número no es primo");
 		} else {
@@ -50,7 +41,7 @@ public class Ejercicio07 {
 		}
 		
 		//Cierra el scanner
-		sc.close();			
+		sc.close();		
 		
 	}
 
