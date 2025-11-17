@@ -12,9 +12,15 @@ public class Ejercicio02 {
 				
 		// Número introducido por el usuario
 		int num;
+		
+		//
+		int contPrimos = 0;
 
 		// Variable para determinar si el número es primo
 		boolean esPrimo = true;
+		
+		//
+		int divisor = 2;
 
 		// Pido un número al usuario
 		System.out.println("Introduzca un número entero positivo:");
@@ -26,19 +32,28 @@ public class Ejercicio02 {
 			if (num == 1) {
 				esPrimo = false;
 			} else {
-				// Si es distinto de 1
-				for (int cont = 2; cont < num ; cont++) {
-					if (num % cont == 0) {
-						esPrimo = false;
-						System.out.println(cont);
+				// 
+				for (int cont = 2; cont <= num ; cont++) {
+					divisor = 2;
+					esPrimo = true;
+					while (divisor < cont && esPrimo) {
+						if(cont % divisor == 0) {
+							esPrimo = false;
+						}
+						divisor++;
+					}
+					if(esPrimo) {
+						contPrimos++;
 					}
 			}
 
 			}
-			System.out.println(esPrimo ? "El número es primo" : "El número no es primo");
-		} else {
+
 			System.out.println("El valor introducido debe ser positivo");
 		}
+		
+		//
+		System.out.println("Hay " + contPrimos);
 		
 		//Cierra el scanner
 		sc.close();		
